@@ -22,18 +22,14 @@ function createConfetti() {
     confettiContainer.style.zIndex = '15';
     document.body.appendChild(confettiContainer);
 
-    for (let i = 0; i < 110; i++) {
+    for (let i = 0; i < 100; i++) {
         const confetti = document.createElement('div');
         confetti.classList.add('confetti');
         confetti.style.left = `${Math.random() * 100}%`;
-        confetti.style.top = `${-Math.random() * 100}%`; // Start above the viewport
         confetti.style.animationDelay = `${Math.random() * 5}s`;
         confetti.style.backgroundColor = getRandomColor();
         confettiContainer.appendChild(confetti);
     }
-
-    // Show confetti after setting up positions
-    confettiContainer.style.display = 'block';
 }
 
 function createBalloons() {
@@ -45,18 +41,14 @@ function createBalloons() {
     balloonContainer.style.zIndex = '3';
     document.body.appendChild(balloonContainer);
 
-    for (let i = 0; i < 27; i++) {
+    for (let i = 0; i < 30; i++) {
         const balloon = document.createElement('div');
         balloon.classList.add('balloon');
         balloon.style.left = `${Math.random() * 100}%`;
-        balloon.style.top = `${-Math.random() * 100}%`; // Start above the viewport
         balloon.style.animationDelay = `${Math.random() * 6}s`;
         balloon.style.backgroundColor = getRandomColor();
         balloonContainer.appendChild(balloon);
     }
-
-    // Show balloons after setting up positions
-    balloonContainer.style.display = 'block';
 }
 
 function createHearts() {
@@ -68,18 +60,14 @@ function createHearts() {
     heartContainer.style.zIndex = '4';
     document.body.appendChild(heartContainer);
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 16; i++) {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = `${Math.random() * 100}%`;
-        heart.style.top = `${-Math.random() * 100}%`; // Start above the viewport
         heart.style.animationDelay = `${Math.random() * 6}s`;
         heart.style.backgroundColor = getRandomColor();
         heartContainer.appendChild(heart);
     }
-
-    // Show hearts after setting up positions
-    heartContainer.style.display = 'block';
 }
 
 function getRandomColor() {
